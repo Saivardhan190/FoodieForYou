@@ -1,19 +1,16 @@
-FoodieForYou 🍽️
-FoodieForYou is a feature-rich food ordering and restaurant management website built with PHP, MySQL, HTML, CSS, and JavaScript. It includes both user-facing pages and an admin panel.
+# 🍽️ FoodieForYou
 
-✅ Live Demo: https://foodieforyou.42web.io
-🖥️ Hosted via: InfinityFree (Free PHP + MySQL Hosting) 
-youtube.com
-+15
-infinityfree.com
-+15
-youtube.com
-+15
+**FoodieForYou** is a feature-rich food ordering and restaurant management website built with **PHP, MySQL, HTML, CSS, and JavaScript**. It includes both user-facing pages and an admin panel.
 
-🚀 Folder Structure
-pgsql
-Copy
-Edit
+- ✅ **Live Demo**: [https://foodieforyou.42web.io](https://foodieforyou.42web.io)  
+- 🖥️ **Hosted via**: InfinityFree (Free PHP + MySQL Hosting)  
+- 👨‍💻 **Developer**: Sai Vardhan Kallempudi  
+- 🐙 **GitHub**: [github.com/Saivardhan190](https://github.com/Saivardhan190)
+
+---
+
+## 📁 Folder Structure
+
 restaurant/
 ├── admin/
 │   ├── add_item.php
@@ -45,21 +42,17 @@ restaurant/
 │   └── signup.php
 ├── scripts.js
 └── index.php
-🗃️ Database Schema & Queries (via phpMyAdmin)
-Table: users
-sql
-Copy
-Edit
+
+#🗃️ Database Schema & Queries (via phpMyAdmin)
+### Table: users
 CREATE TABLE users (
   id INT AUTO_INCREMENT PRIMARY KEY,
   username VARCHAR(50),
   email VARCHAR(100),
   password VARCHAR(255)
 );
-Table: menu
-sql
-Copy
-Edit
+
+### Table: menu
 CREATE TABLE menu (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(100),
@@ -67,20 +60,16 @@ CREATE TABLE menu (
   price DECIMAL(10,2),
   image VARCHAR(255)
 );
-Table: cart
-sql
-Copy
-Edit
+
+### Table: cart
 CREATE TABLE cart (
   id INT AUTO_INCREMENT PRIMARY KEY,
   user_id INT,
   item_id INT,
   quantity INT
 );
-Table: orders
-sql
-Copy
-Edit
+
+### Table: orders
 CREATE TABLE orders (
   id INT AUTO_INCREMENT PRIMARY KEY,
   user_id INT,
@@ -88,10 +77,8 @@ CREATE TABLE orders (
   total_amount DECIMAL(10,2),
   status VARCHAR(50)
 );
-Table: order_items
-sql
-Copy
-Edit
+
+### Table: order_items
 CREATE TABLE order_items (
   id INT AUTO_INCREMENT PRIMARY KEY,
   order_id INT,
@@ -99,10 +86,8 @@ CREATE TABLE order_items (
   quantity INT,
   price DECIMAL(10,2)
 );
-Table: payments
-sql
-Copy
-Edit
+
+### Table: payments
 CREATE TABLE payments (
   id INT AUTO_INCREMENT PRIMARY KEY,
   order_id INT,
@@ -111,20 +96,16 @@ CREATE TABLE payments (
   method VARCHAR(50),
   status VARCHAR(50)
 );
-Table: feedback
-sql
-Copy
-Edit
+
+### Table: feedback
 CREATE TABLE feedback (
   id INT AUTO_INCREMENT PRIMARY KEY,
   user_id INT,
   message TEXT,
   submitted_at DATETIME
 );
-Table: reservations
-sql
-Copy
-Edit
+
+### Table: reservations
 CREATE TABLE reservations (
   id INT AUTO_INCREMENT PRIMARY KEY,
   user_id INT,
@@ -133,20 +114,17 @@ CREATE TABLE reservations (
   num_people INT,
   message TEXT
 );
-Table: staff
-sql
-Copy
-Edit
+
+### Table: staff
 CREATE TABLE staff (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(100),
   role VARCHAR(100),
   email VARCHAR(100)
 );
-🔗 PHP-MySQL Integration Example (includes/db.php)
-php
-Copy
-Edit
+
+# 🔗 PHP-MySQL Integration Example (includes/db.php)
+
 <?php
 $conn = mysqli_connect(
   'sqlXXX.epizy.com',    // hostname
@@ -158,7 +136,8 @@ if (!$conn) {
   die("Connection failed: " . mysqli_connect_error());
 }
 ?>
-📁 Pages & Functionality
+
+# 📁 Pages & Functionality
 index.php – Homepage displaying featured items.
 
 menu.php – Shows all menu items (from menu).
@@ -175,73 +154,35 @@ signup/login/logout – User authentication (users table).
 
 admin/ – Panel for adding/editing menu items, reservations, staff, generating reports, and viewing all orders.
 
-🌐 Deployment on InfinityFree
+# 🌐 Deployment on InfinityFree
 Sign up on InfinityFree 
-forum.infinityfree.com
-+3
-colorlib.com
-+3
-campcodes.com
-+3
-github.com
-infinityfree.com
-+6
-medium.com
-+6
-youtube.com
-+6
-.
 
-Create a hosting account → note down FTP and MySQL credentials.
+1.Create a hosting account → note down FTP and MySQL credentials.
 
-Use File Manager or FileZilla to upload your project folder to the htdocs/ directory.
+2.Use File Manager or FileZilla to upload your project folder to the htdocs/ directory.
 
-In Control Panel → MySQL Databases → create database.
+3.In Control Panel → MySQL Databases → create database.
 
-Open phpMyAdmin → import the SQL file containing your schema.
+4.Open phpMyAdmin → import the SQL file containing your schema.
 
-Update includes/db.php with your hosting credentials.
+5.Update includes/db.php with your hosting credentials.
 
-Access your live URL (e.g., https://foodieforyou.epizy.com).
+6.Access your live URL (e.g., https://foodieforyou.epizy.com).
 
-For changes to file or domain, update any paths in config or includes. 
-forum.infinityfree.com
-+4
-forum.infinityfree.com
-+4
-youtube.com
-+4
-forum.infinityfree.com
-+1
-forum.infinityfree.com
-+1
-forum.infinityfree.com
-+3
-medium.com
-+3
-forum.infinityfree.com
-+3
-docs.bdus.cloud
+7.For changes to file or domain, update any paths in config or includes. 
 
-📤 Deployment Steps (Git + GitHub + InfinityFree)
-bash
-Copy
-Edit
-cd /c/xampp/htdocs/restaurant
-git init
-touch .gitignore
-# Add entries
-echo "includes/db.php" >> .gitignore
-git add .
-git commit -m "Initial commit: FoodieForYou"
-git remote add origin https://github.com/yourusername/FoodieForYou.git
-git branch -M main
-git push -u origin main --force
-Then for InfinityFree:
+# 📤 Deployment Steps (Git + GitHub + InfinityFree)
 
-bash
-Copy
-Edit
+1.cd /c/xampp/htdocs/restaurant
+2.git init
+3.touch .gitignore
+4.echo "includes/db.php" >> .gitignore
+5.git add .
+6.git commit -m "Initial commit: FoodieForYou"
+7.git remote add origin https://github.com/yourusername/FoodieForYou.git
+8.git branch -M main
+9.git push -u origin main --force.
+
 # Export SQL
 mysqldump -u root -p foodie > db_schema.sql
 # Upload SQL via phpMyAdmin on InfinityFree
