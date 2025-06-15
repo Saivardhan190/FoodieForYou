@@ -118,21 +118,21 @@ CREATE TABLE staff (
 ```
 
 # 📁 Pages & Functionality
-index.php – Homepage displaying featured items.
+- index.php – Homepage displaying featured items.
 
-menu.php – Shows all menu items (from menu).
+- menu.php – Shows all menu items (from menu).
 
-view_orders.php – User order history (from orders + order_items).
+- view_orders.php – User order history (from orders + order_items).
 
-cart.php – Cart management (uses cart).
+- cart.php – Cart management (uses cart).
 
-payment.php – Processes payments (logs to payments).
+- payment.php – Processes payments (logs to payments).
 
-reservation.php – Reservation form (records to reservations).
+- reservation.php – Reservation form (records to reservations).
 
-signup/login/logout – User authentication (users table).
+- signup/login/logout – User authentication (users table).
 
-admin/ – Panel for adding/editing menu items, reservations, staff, generating reports, and viewing all orders.
+- admin/ – Panel for adding/editing menu items, reservations, staff, generating reports, and viewing all orders.
 
 # 🌐 Deployment on InfinityFree
 Sign up on InfinityFree 
@@ -171,18 +171,17 @@ Sign up on InfinityFree
 
 9.git push -u origin main --force.
 
-# Upload SQL via phpMyAdmin on InfinityFree
-📝 Screenshots
+# 📝 Screenshots
 Above you'll find screenshots showing how the front-end and admin dashboard look so users and contributors get a visual feel for the project.
 
 # 💡 Tips & Next Steps
-Performance: Use image compression and asset minification.
+- Performance: Use image compression and asset minification.
 
-SEO: Add meta tags, alt attributes, and structured data.
+- SEO: Add meta tags, alt attributes, and structured data.
 
-Security: Use prepared statements with PDO or MySQLi.
+- Security: Use prepared statements with PDO or MySQLi.
 
-Extras: Implement email notifications, AJAX features in cart, or integrate an API for more dynamic functionality.
+- Extras: Implement email notifications, AJAX features in cart, or integrate an API for more dynamic functionality.
 
 # 📝 License & Contact
 License: MIT
