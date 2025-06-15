@@ -8,17 +8,37 @@
 - 🐙 **GitHub**: [github.com/Saivardhan190](https://github.com/Saivardhan190)
 
 ---
+# 🛠️ Tech Stack
+
+- Frontend: HTML, CSS, JavaScript
+- Backend: PHP
+- Database: MySQL
+- Deployment: InfinityFree (with phpMyAdmin)
+- Version Control: Git + GitHub
+
+  # ✨ Features
+
+- 🔐 User Signup/Login
+- 🛒 Cart and Order Management
+- 💳 Payment Logging
+- 📅 Reservation System
+- 🧾 Admin Panel for Item & Staff Management
+- 📊 Sales Reports
+- 📨 Contact & Feedback
 
 #🗃️ Database Schema & Queries (via phpMyAdmin)
+
 ### Table: users
+```sql
 CREATE TABLE users (
   id INT AUTO_INCREMENT PRIMARY KEY,
   username VARCHAR(50),
   email VARCHAR(100),
   password VARCHAR(255)
 );
-
+```
 ### Table: menu
+```sql
 CREATE TABLE menu (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(100),
@@ -26,16 +46,18 @@ CREATE TABLE menu (
   price DECIMAL(10,2),
   image VARCHAR(255)
 );
-
+```
 ### Table: cart
+```sql
 CREATE TABLE cart (
   id INT AUTO_INCREMENT PRIMARY KEY,
   user_id INT,
   item_id INT,
   quantity INT
 );
-
+```
 ### Table: orders
+```sql
 CREATE TABLE orders (
   id INT AUTO_INCREMENT PRIMARY KEY,
   user_id INT,
@@ -43,8 +65,9 @@ CREATE TABLE orders (
   total_amount DECIMAL(10,2),
   status VARCHAR(50)
 );
-
+```
 ### Table: order_items
+```sql
 CREATE TABLE order_items (
   id INT AUTO_INCREMENT PRIMARY KEY,
   order_id INT,
@@ -52,8 +75,9 @@ CREATE TABLE order_items (
   quantity INT,
   price DECIMAL(10,2)
 );
-
+```
 ### Table: payments
+```sql
 CREATE TABLE payments (
   id INT AUTO_INCREMENT PRIMARY KEY,
   order_id INT,
@@ -62,16 +86,18 @@ CREATE TABLE payments (
   method VARCHAR(50),
   status VARCHAR(50)
 );
-
+```
 ### Table: feedback
+```sql
 CREATE TABLE feedback (
   id INT AUTO_INCREMENT PRIMARY KEY,
   user_id INT,
   message TEXT,
   submitted_at DATETIME
 );
-
+```
 ### Table: reservations
+```sql
 CREATE TABLE reservations (
   id INT AUTO_INCREMENT PRIMARY KEY,
   user_id INT,
@@ -80,14 +106,16 @@ CREATE TABLE reservations (
   num_people INT,
   message TEXT
 );
-
+```
 ### Table: staff
+```sql
 CREATE TABLE staff (
   id INT AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(100),
   role VARCHAR(100),
   email VARCHAR(100)
 );
+```
 
 # 📁 Pages & Functionality
 index.php – Homepage displaying featured items.
