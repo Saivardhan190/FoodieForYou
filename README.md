@@ -26,7 +26,7 @@
 - 📊 Sales Reports
 - 📨 Contact & Feedback
 
-#🗃️ Database Schema & Queries (via phpMyAdmin)
+# 🗃️ Database Schema & Queries (via phpMyAdmin)
 
 ### Table: users
 ```sql
