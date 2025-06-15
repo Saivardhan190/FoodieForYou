@@ -9,40 +9,6 @@
 
 ---
 
-## 📁 Folder Structure
-
-restaurant/
-├── admin/
-│   ├── add_item.php
-│   ├── login.php
-│   ├── logout.php
-│   ├── manage_items.php
-│   ├── manage_reservations.php
-│   ├── manage_staff.php
-│   ├── reports.php
-│   └── view_orders.php
-│
-├── css/
-│   └── style.css
-├── images/
-│   └── [food & UI assets]
-├── includes/
-│   ├── db.php
-│   ├── header.php
-│   └── footer.php
-├── pages/
-│   ├── about.php
-│   ├── cart.php
-│   ├── login.php
-│   ├── logout.php
-│   ├── menu.php
-│   ├── orders.php
-│   ├── payment.php
-│   ├── reservation.php
-│   └── signup.php
-├── scripts.js
-└── index.php
-
 #🗃️ Database Schema & Queries (via phpMyAdmin)
 ### Table: users
 CREATE TABLE users (
@@ -174,22 +140,28 @@ Sign up on InfinityFree
 # 📤 Deployment Steps (Git + GitHub + InfinityFree)
 
 1.cd /c/xampp/htdocs/restaurant
+
 2.git init
+
 3.touch .gitignore
+
 4.echo "includes/db.php" >> .gitignore
+
 5.git add .
+
 6.git commit -m "Initial commit: FoodieForYou"
+
 7.git remote add origin https://github.com/yourusername/FoodieForYou.git
+
 8.git branch -M main
+
 9.git push -u origin main --force.
 
-# Export SQL
-mysqldump -u root -p foodie > db_schema.sql
 # Upload SQL via phpMyAdmin on InfinityFree
 📝 Screenshots
 Above you'll find screenshots showing how the front-end and admin dashboard look so users and contributors get a visual feel for the project.
 
-💡 Tips & Next Steps
+# 💡 Tips & Next Steps
 Performance: Use image compression and asset minification.
 
 SEO: Add meta tags, alt attributes, and structured data.
@@ -198,7 +170,7 @@ Security: Use prepared statements with PDO or MySQLi.
 
 Extras: Implement email notifications, AJAX features in cart, or integrate an API for more dynamic functionality.
 
-📝 License & Contact
+# 📝 License & Contact
 License: MIT
 
 Developer: Sai vardhan kallempudi
