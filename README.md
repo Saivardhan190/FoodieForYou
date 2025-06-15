@@ -89,20 +89,6 @@ CREATE TABLE staff (
   email VARCHAR(100)
 );
 
-# 🔗 PHP-MySQL Integration Example (includes/db.php)
-
-<?php
-$conn = mysqli_connect(
-  'sqlXXX.epizy.com',    // hostname
-  'epiz_XXXXXX',         // username
-  'your_password',       // password
-  'epiz_XXXXXX_foodie'   // database name
-);
-if (!$conn) {
-  die("Connection failed: " . mysqli_connect_error());
-}
-?>
-
 # 📁 Pages & Functionality
 index.php – Homepage displaying featured items.
 
